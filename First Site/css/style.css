@@ -1,0 +1,372 @@
+
+*,
+*:before,
+*:after
+ {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1,h2,h3,h4 { 
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*картинка с итто*/
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 100vh;
+
+    text-align: center;
+
+    background: 
+    url("/img/orig.jpg") no-repeat center center/cover rgb(112, 112, 112);
+    background-blend-mode: multiply ;
+    background-size: cover;
+}
+
+/*ровный текст*/
+.intro_inner {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;   
+}
+
+/*ТЕКСТ КОТОРЫЙ НЕ ВСТАЕТ КУДА НАДА
+встал*/
+.intro_title {
+    color:#fff;
+    font-size: 135px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/*полосочка после крупного текста*/
+.intro_title::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 3px;
+    margin: 10px auto 60px;
+    background-color:#fff;
+}
+
+.intro_sup {
+    margin-bottom: 20px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    color: #fff;
+}
+
+/*шапочка девочки*/
+.header {
+    padding-top: 30px;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* для пунктов сверху размещение*/
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/*это стиль лого */
+.header_logo {
+    margin-left: 100px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/*чтобы сноски сверхзу не были мелкими*/
+.nav {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/*стилизация пунктов сверху*/
+.nav_link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    position: relative;
+
+    color:#fff;
+    text-decoration: none;
+    transition:color 0.2s linear;
+}
+
+/*ЧЕРТОЧКА ААААААААААААААААААА*/
+.nav_link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #cba964;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transform: opacity 0.2s linear;
+}
+
+/*переход в цвет*/
+.nav_link:hover {
+    color: #cba964;
+}
+
+/*для плавного появления черточки штучек сверху*/
+.nav_link:hover::after {
+    opacity: 1;
+}
+
+/*кнопка бесполезная*/
+.boton {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 40px;
+
+    border: 2px solid #fff;
+    font-size: 14px;
+    font-weight: 700;
+    color:#fff;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s linear, color 0.2s linear;
+}
+
+.boton:hover {
+    background-color:#cba964;
+    color:#fff;
+    border-color: #cba964;
+}
+
+/*------------------2 block-------------------*/
+
+.container1 {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.fon1 { 
+    width: 100%;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.fon1 #text_1 {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #333;
+}
+
+.fon1 #text_2 {
+    font-size: 35px;
+    padding-left: 30%;
+    text-align: justify;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.fon1 #text_3 {
+    font-size: 35px;
+    margin-top: 440px;
+    padding-left: 30%;
+    text-align: justify;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.fon1 #text_section1 {
+    font-family: 'Kaushan Script', cursive;
+    
+}
+
+.fon1 h2 {
+    padding-top: 3%;
+    padding-left: 30%;
+    padding-right: 2%;
+    text-align: justify;
+    font-size: 30px;
+    background-color: #f9f5f0;
+    margin-bottom: 20px;
+}
+
+.itto_story {
+    margin-top: 100px;
+    margin-left: 40px;
+    position: absolute;
+    height: 700px;
+}
+
+.icon {
+    margin-top: 950px;
+    margin-left: 100px;
+    position: absolute;
+    height: 700px;
+}
+
+.fon1 #text_for_icon {
+    font-size: 35px;
+    margin-top: 350px;
+    padding-left: 30%;
+    text-align: justify;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.fon1 #text_for_emia {
+    margin-bottom: 100px;
+}
+
+.iconreally {
+    margin-top: 1900px;
+    margin-left: 100px;
+    position: absolute;
+}
+
+/*------------------3 block-------------------*/
+
+.container2 {
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container2 #text_center {
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 30px;
+    font-size: 45px;
+    color: #fff;
+}
+
+.fon2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    background: 
+    url("/img/maxresdefault.jpg") no-repeat center center/cover rgb(112, 112, 112);
+    background-blend-mode: multiply ;
+    background-size: cover;
+}
+
+/*------------------4 block-------------------*/
+
+.container3{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container3 h1 {
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.ataka{
+    padding: 20px;
+}
+
+.galery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 15px;
+}
+
+/*------------------5 block-------------------*/
+.vstavka {
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fon_vst{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    background: 
+    url("/img/story.jpg") no-repeat center center/cover rgb(112, 112, 112);
+    background-blend-mode: multiply ;
+    background-size: cover;
+}
+
+/*------------------5 block-------------------*/
+
+.container4 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#text_for3 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.video {
+    margin-left: 24%;
+    padding-bottom: 50px;
+}
+/*-----------------6 block-------------------*/
+
+footer {
+    height: 100px;
+    background: #cba964;
+}
+
+.footer {
+    padding-top: 30px;
+}
+.call{
+    text-align: center;
+}
